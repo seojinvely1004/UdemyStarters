@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- type=text/password/button/hidden/submit 
+1. input - 사용자 입력 유도 
+2. form - html 정보 처리 다른 파일(a.jsp) 전달
+-->
+<h1>제목</h1>
+	<form action="http://localhost:8080/html/a.jsp">
+		아이디입력:<input type=text name="id"><br>
+		암호 입력:<input type=password name="pw"><br>
+		관리자모드:<input type=hidden value="admin" name="mode"><br><!-- id는 프론트에서 ,name은 백에서 입력값 식별자 용도로 쓰인다. -->
+		성별 : <input type=radio value="남자" name="gender">남자
+		<input type=radio value="여자" name="gender">여자
+		<br>
+		관심과목(복수선택 가능):<input type=CHECKBOX name="like" value="Java">Java
+		<input type=CHECKBOX name="like" value="Srping">Spring
+		<input type=CHECKBOX name="like" value="HTML">HTML
+		<input type=CHECKBOX name="like" value="DB">DB
+		<input type="submit" value="전송">
+		<input type="reset" value="초기화">
+		<input type="button" value="무엇을 할까요">
+		<input type=image src="images/jquery.png">
+		파일업로드:<input type="file" name="myfile">
+		
+	</form>
+</body>
+</html>
