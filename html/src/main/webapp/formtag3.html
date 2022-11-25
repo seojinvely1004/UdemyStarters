@@ -14,10 +14,10 @@ window.onload = function(){
 	<form action="b.jsp"> <!--form태그의 action속성으로 데이터를 전송 _ 상대경로 -->
 	<!-- <form action="http://localhost:8080/html/b.jsp"> 절대경로 -->
 		<textarea cols="50" rows="5" name="memo" id="memoid">여기에 메모를 작성하세요~!</textarea>
-		<select name="txt">
+		<select name="txt" multiple><!-- multiple:드롭다운 목록에서 둘 이상의 항목을 선택할 때 사용 -->
 			<option value="hwp">한글</option>
 			<option value="doc">워드</option>
-			<option value="txt">메모장</option>
+			<option value="txt" selected="selected">메모장</option><!-- 드롭다운 메뉴를 삽입할 때 기본적으로 선택해서 보여 줄 항목을 지정한다. -->
 			<option value="html">html</option>
 		</select>
 		<input type="submit" value="전송"><!-- form태그의 action과 연결 -->
