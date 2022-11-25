@@ -5,30 +5,50 @@
 <title>Insert title here</title>
 <style>
 #test1 h1 {
-	display: inline;/*inline은 width,height속성을 먹지 않는다.*/
-	width:100px;
-	height:100px;
-	background-color:pink;
+	display: inline; /*inline은 width,height속성을 먹지 않는다.*/
+	width: 100px;
+	height: 100px;
+	background-color: pink;
 }
 
 #test2 h1 {
 	display: inline-block;
-	width:100px;
-	height:100px;
-	background-color:orange;
+	width: 100px;
+	height: 100px;
+	background-color: orange;
 }
 
 #test3 h1 {
 	display: block;
-	width:100px;
-	height:100px;
-	background-color:lime;
+	width: 100px;
+	height: 100px;
+	background-color: lime;
 }
+#main li {
+display: inline;
+}
+
+#main ol {
+width:100%;
+text-align:center;}
+
+a {
+text-decoration: none;
+}
+
 /*block, inline-block은 width,height 속성 먹는다. 
 block이라는 말 들어가는 속성은 먹는다고 생각하면 된다.*/
 </style>
 </head>
 <body>
+	<div id="main">
+		<ol>
+			<li><a href="news.html">뉴스</a></li>
+			<li><a href="login.html">로그인</a></li>
+			<li><a href="board.html">게시판</a></li>
+			<li><a href="shopping">쇼핑</a></li>
+		</ol>
+	</div>
 	<div id="test1">
 		<h1>제목1</h1>
 		<h1>제목2</h1>
@@ -44,5 +64,6 @@ block이라는 말 들어가는 속성은 먹는다고 생각하면 된다.*/
 		<h1>제목8</h1>
 		<h1>제목9</h1>
 	</div>
+
 </body>
 </html>
