@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#test1 h1 {
+	display: inline;/*inline은 width,height속성을 먹지 않는다.*/
+	width:100px;
+	height:100px;
+	background-color:pink;
+}
+
+#test2 h1 {
+	display: inline-block;
+	width:100px;
+	height:100px;
+	background-color:orange;
+}
+
+#test3 h1 {
+	display: block;
+	width:100px;
+	height:100px;
+	background-color:lime;
+}
+/*block, inline-block은 width,height 속성 먹는다. 
+block이라는 말 들어가는 속성은 먹는다고 생각하면 된다.*/
+</style>
+</head>
+<body>
+	<div id="test1">
+		<h1>제목1</h1>
+		<h1>제목2</h1>
+		<h1>제목3</h1>
+	</div>
+	<div id="test2">
+		<h1>제목4</h1>
+		<h1>제목5</h1>
+		<h1>제목6</h1>
+	</div>
+	<div id="test3">
+		<h1>제목7</h1>
+		<h1>제목8</h1>
+		<h1>제목9</h1>
+	</div>
+</body>
+</html>
