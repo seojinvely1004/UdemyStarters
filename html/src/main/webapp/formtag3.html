@@ -3,13 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript">//html안에서 동적역할해주도록 script추가
+window.onload = function(){
+	alert(document.getElementId("memoid").value);
+}
+</script>
 </head>
 <body>
 	<h1>select태그와 textarea</h1>
 	<form action="b.jsp"> <!--form태그의 action속성으로 데이터를 전송 _ 상대경로 -->
 	<!-- <form action="http://localhost:8080/html/b.jsp"> 절대경로 -->
-		<textarea cols="50" rows="5">여기에 메모를 작성하세요~!</textarea>
-		<select>
+		<textarea cols="50" rows="5" name="memo" id="memoid">여기에 메모를 작성하세요~!</textarea>
+		<select name="txt">
 			<option value="hwp">한글</option>
 			<option value="doc">워드</option>
 			<option value="txt">메모장</option>
@@ -17,5 +22,6 @@
 		</select>
 		<input type="submit" value="전송"><!-- form태그의 action과 연결 -->
 	</form> 
+	<a href="#memoid">메모장으로 이동</a>
 </body>
 </html>
