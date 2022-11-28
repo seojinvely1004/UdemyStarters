@@ -19,21 +19,35 @@
 }
 
 #test3 h1 {
-	display: block;
+	display: block; /*default*/
 	width: 100px;
 	height: 100px;
 	background-color: lime;
 }
-#main li {
+/* 리스트 inline 중앙정렬 방법 1
+ #main li {
 display: inline;
-}
+/*li에 inline-block을 쓰면 list-style-type이 자동으로 none으로 변경된다 */
+/* }
 
 #main ol {
 width:100%;
-text-align:center;}
+text-align:center;} */
+
+/* 리스트 inline 중앙정렬 방법 2 */
+#main li {
+	background-color: yellow;
+	display: inline-block;
+}
+
+#main {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+}
 
 a {
-text-decoration: none;
+	text-decoration: none;
 }
 
 /*block, inline-block은 width,height 속성 먹는다. 
