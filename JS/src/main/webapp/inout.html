@@ -42,7 +42,17 @@ var array = [1,2,3,4,5];
 //var array = [];//undefined
 document.write("<H3>" + array[3] + "</h3>");//4
 
+var f_f = 100;
 
+//prompt('과정명을 입력하세요');
+var title = prompt('과정명을 입력하세요~!'); //prompt : 문자열리턴
+document.write("<H3>" + title + "</h3>");
+
+var delete_Result = confirm('삭제를 하시겠습니까?!'); //confirm : 논리값리턴
+document.write("<H3>" + delete_Result + "</h3>");
+
+document.write("<H3>" + typeof(delete_Result) + "</h3>");
+document.write("<H3>" + typeof(title) + "</h3>");
 </script>
 </body>
 </html>
