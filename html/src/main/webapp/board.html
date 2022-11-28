@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="board.css">
+</head>
+<body>
+<div class="container">
+	<h1>boardlist를 출력합니다.</h1>
+	<select id="boardlist">
+		<option value="title">제목</option>
+		<option value="contents">내용</option>
+		<option value="writer">작성자</option>
+	</select> 검색어:
+	<input type="text"></input>
+	<input type="button" value="검색"></input>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>작성</th>
+				<th>조회수</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td><a href="boardcontents.html">제목1</a></td>
+				<td>작성자 1</td>
+				<td>0</td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td><a href="boardcontents.html">제목2</a></td>
+				<td>작성자 2</td>
+				<td>0</td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td><a href="boardcontents.html">제목3</a></td>
+				<td>작성자 3</td>
+				<td>11</td>
+			</tr>
+
+			<tr>
+				<td>4</td>
+				<td><a href="boardcontents.html">제목4</a></td>
+				<td>작성자 4</td>
+				<td>22</td>
+			</tr>
+
+			<tr>
+				<td>5</td>
+				<td><a href="boardcontents.html">제목5</a></td>
+				<td>작성자 5</td>
+				<td>11</td>
+			</tr>
+		</tbody>
+		<tr>
+	</table>
+	
+	<h2>페이지 번호</h2>
+	
+	<div class="paging-wrap">
+		<ul class="paging">
+			<li><a href="boardlist.html">1</a></li>
+			<li><a href="boardlist.html">2</a></li>
+			<li><a href="boardlist.html">3</a></li>
+			<li><a href="boardlist.html">4</a></li>
+			<li><a href="boardlist.html">5</a></li>
+		</ul>
+	</div>
+	
+	<h4><a href="boardiwrite.html"> 글쓰기 </a></h4>
+	</div>
+</body>
+</html>

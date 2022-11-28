@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.container {
+
+width:100%;
+height:800px;
+}
+
+h1 {
+
+margin:0;
+border:1px solid blue ;
+border-radius:20px
+
+}
+
+h1, h2 {
+width:100%;
+text-align:center;
+margin:0;
+padding:0;
+}
+table {
+border-collapse:collapse;
+text-align:center;
+margin:0 auto;
+
+}
+th {
+	background-color:gray;
+}
+.paging-wrap { 
+width:100%;
+margin:0 auto;
+text-align:center;
+}
+ul {
+margin:0;
+padding:0;
+
+}
+.paging li {
+list-style:none;
+margin:0;
+display:inline;
+text-align:center;
+}
+a {
+text-decoration:none;
+}
+h4 {
+width:50%;
+float:left;
+text-align:left;
+}
