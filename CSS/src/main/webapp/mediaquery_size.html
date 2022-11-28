@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<style>
+body {
+	background-image: url('/html/images/google.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+/*큰 픽셀크기부터 적용 해줘야 한다.*/
+@media screen and (max-width:1000px) {
+body {
+		background-image: url('/html/images/html5.jpg');
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
+
+@media screen and (max-width:800px) {
+body {
+		background-image: url('/html/images/google.png');
+		background-position: right center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
+@media screen and (max-width:400px) and (orientation:landscape) {
+	body {
+		background-image: url('/html/images/google.png');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
+</style>
+</head>
+<body>
+
+</body>
+</html>
