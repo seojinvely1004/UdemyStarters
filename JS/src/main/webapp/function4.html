@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+#clock {
+background-color:green;
+margin : auto;
+text-align:center;
+}
+</style>
 </head>
 <body>
 	<script type="text/javascript">
@@ -14,12 +21,22 @@
 		//window.setTimeout(()=>{document.write(h3 + new Date().toLocaleTimeString() + h33);}, 3000);//브라우저에 3초 뒤 시간 하나만 표시됨
 		//f1();
 		//window.setInterval(()=>{document.write(h3 + new Date().toLocaleTimeString() + h33);}, 1000);//브라우저에 1초마다 시간이 표시됨
-	    		
+	    /*	
 		//1초마다 시간 표시
 		var timer = window.setInterval(()=>{document.write(h3 + new Date(). toLocaleTimeString() + h33);}, 1000);
 		//10초가 지나면 시간표시를 중단
 		window.setTimeout(()=>{window.clearInterval(timer);}, 10000);
-		
+		*/
+		//1초마다 시간 표시
+		var timer = window.setInterval(()=>{
+			//id="clock"인 태그를 조회하여 구현할게.	
+			document.getElementById("clock").innerHTML = h3 + new Date().toLocaleTimeString() + h33
+		}, 1000);
+		//10초가 지나면 시간표시를 중단
+		window.setTimeout(()=>{window.clearInterval(timer);}, 10000);
 	</script>
+	<div id="clock"></div>
+	
+	
 </body>
 </html>
