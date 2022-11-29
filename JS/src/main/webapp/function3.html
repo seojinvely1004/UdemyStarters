@@ -8,8 +8,10 @@
 <script type="text/javascript">
 var h3 = "<h3>";
 var h33 = "</h3>";
-//*name="전역변수";
-
+//var name2 ; //hoisting
+document.write(h3 + name2 + h33);
+var name2 = "전역변수";//hoisting (var 호이스팅)/선언된 위치는 문장의 아랫쪽. 스크립트 맨 위로 끌어올리기 
+//변수를 뒤에서 선언하지만, 마치 앞에서 미리 앞에서 선언한 것처럼 인식함.
 function f1() {
 	var name = "지역변수"; 
 	name2 = "전역변수";
