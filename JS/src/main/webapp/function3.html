@@ -19,8 +19,16 @@ function f1() {
 	document.write(h3 + name + ":" + name2 + h33);
 	//*name = "전역변수수정";
 }
-f1(); //name은 지역변수이므로 f1내에서만 호출가능하다.
-document.write(h3 + name2 + h33);
+//f1(); //name은 지역변수이므로 f1내에서만 호출가능하다.
+//document.write(h3 + name2 + h33);
+//화살표함수 : (매개변수) =>{함수내용} (a) => {return a*a;} OR   a => a*a;
+let f2 =(a)=>{return a*a;}//1.변수처럼 사용
+document.write(h3 + f2(10) + h33);
+document.write(h3 + (a=>a*a)(5) + h33); //2. 정의즉각실행
+
+setTimeout(function() {alert('출력');}, 1000);
+setTimeout(()=>{alert('출력');},1000);
+setInterval(()=>{alert('출력');},1000);
 </script>
 </body>
 </html>
