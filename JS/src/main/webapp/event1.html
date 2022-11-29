@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+window.onload = function(){
+	document.getElementById("btn1").onmouseover = function() {
+		document.getElementById("btn1").value = "버튼10";
+		document.getElementById("btn1").style = "width:100px; height:50px; background-color:orange";
+	}
+	document.getElementById("btn1").onmouseout = function() {
+		document.getElementById("btn1").value = "버튼10";
+		document.getElementById("btn1").style = "width:100px; height:50px; background-color:pink";
+	}
+	document.getElementById("btn1").onclick = function() {
+		document.getElementById("btn1").value = 
+			document.getElementById("btn2").value;
+		document.getElementById("btn1").style = "width:100px; height:50px; background-color:aqua";
+	}
+	
+}
+</script>
+</head>
+<body>
+<input id="btn1" type=button value="버튼1">
+<input id="btn2" type=button value="버튼2">
+</body>
+</html>
