@@ -6,7 +6,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-	let name2 = "전역변수";
+		let name2 = "전역변수";
 		function f1() {
 			document.write("<h3>f1함수실행</h3>");
 		}//f1정의 end
@@ -17,11 +17,31 @@
 				document.write("<h3>area함수실행-반지름이 " + radius + "인 원의 면적="
 						+ radius * radius * 3.14 + "</h3>");
 		}
+		function rect(w, h) {
+			document.write("<h3> 가로 = " + w + ",세로 = " + h + "인 사각형의 면적=" + w * h
+					+ "</h3>");
+		}
+		function isThree(su) {
+			if(su % 3 == 0) {
+				return "3의 배수";
+			}else {
+				return "3의 배수 아님";
+			}
+		}
+		let result1 = isThree(30);
+		document.write("<h3> 30:" + result1 + "</h3>");
+		let result2 = isThree(31);
+		document.write("<h2> 31:" + result2 + "</h2>");
+		//isThree(30);
+		//isThree(31);
+		rect(6, 8);
+		rect(6);
+		rect(6, 8, 10);
 		document.write("<h3>전역 실행</h3>");
-		f1();//f1 호출 실행
+		f1();//f1 호출 실행                                                                                                                                                                                                                                                            
 		area(5);//area 호출 실행하여 매개변수 radius 5인값
 		area(15)
-		area("십");
+		area("십");//함수의 정의 순서가 아니라 호출 순서대로 값이 출력된다.
 	</script>
 </body>
 </html>
