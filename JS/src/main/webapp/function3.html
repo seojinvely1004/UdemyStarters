@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+var h3 = "<h3>";
+var h33 = "</h3>";
+//*name="전역변수";
+
+function f1() {
+	var name = "지역변수"; 
+	name2 = "전역변수";
+	//document.write(h3 + this.name + h33); //this를 붙여주면 전역변수가 된다.
+	document.write(h3 + name + ":" + name2 + h33);
+	//*name = "전역변수수정";
+}
+f1(); //name은 지역변수이므로 f1내에서만 호출가능하다.
+document.write(h3 + name2 + h33);
+</script>
+</body>
+</html>
