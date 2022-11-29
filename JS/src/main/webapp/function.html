@@ -6,12 +6,22 @@
 </head>
 <body>
 	<script type="text/javascript">
-	function f1() {
-		document.write("<h3>f1함수실행</h3>");
-	}//f1정의 end
-	document.write("<h3>전역 실행</h3>");
-	f1();//f1 호출 실행
-		
+	let name2 = "전역변수";
+		function f1() {
+			document.write("<h3>f1함수실행</h3>");
+		}//f1정의 end
+		function area(radius) {//매개변수 (함수이름옆에 괄호안에 정의되어지는 매개변수> 5를받아서 연결해줄게. > let radius가필요없어짐)
+			//let radius = 5;
+			let name = "원";//지역변수
+			if (typeof radius == "number")
+				document.write("<h3>area함수실행-반지름이 " + radius + "인 원의 면적="
+						+ radius * radius * 3.14 + "</h3>");
+		}
+		document.write("<h3>전역 실행</h3>");
+		f1();//f1 호출 실행
+		area(5);//area 호출 실행하여 매개변수 radius 5인값
+		area(15)
+		area("십");
 	</script>
 </body>
 </html>
