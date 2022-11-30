@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function emp(id, name, salary) {//1. 
+			this.id = id;
+			this.name = name;
+			this.salary = salary;
+			this.calcSalary = function(bonus) {
+				this.salary = this.salary + bonus;
+				return this.salary;
+			}
+			this.print = function() {//3. 공통으로 사용하여 출력하기 위해 emp내부에 선언.
+				document.write("<h3>사원의 이름은 " + this.name + "이고 사번은 " + this.id
+						+ "입니다. 급여는 " + this.salary + "입니다</h3>");
+			}
+		}
+		//2. new + 객체 => 함수로 호출.
+		//emp1(100, "홍길동", 45000.00);//"함수로 호출"하여 사용(객체로 사용X) /객체는 있는 그대로 복사본을만드는것.한사람의것만 복사할 게 아니니 함수로 호출.
+		var emp1 = new emp(100, "홍길동", 45000.00);//"객체로 호출"=메모리 복사(함수2개 변수3개)
+		var emp2 = new emp(200, "이철수", 55000.00);//"객체로 호출"
+		emp1.print();//4.
+		emp2.print();
+		//emp1.calSalary(5000);
+		//emp2.calcSalary(-5000);
+	</script>
+</body>
+</html>
