@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//객체(변수의일종) = 메소드(함수)+프로퍼티(변수)
+//1.var + 객체emp1= 변수id,name,salary + 함수calcSalasy(매개변수bonus)
+//객체 내부에 선언하는 변수는 var,let키워드 붙이지 않는다.
+var emp1 = {
+	id : 100,//사번
+	name : "홍길동",
+	salary : 45000.00,
+	calcSalary : function(bonus) {
+		this.salary = this.salary + bonus;
+		return this.salary;		//bonus를 포함하여 salary를 리턴.
+		//salary = salary + bonus;
+		//return salary;
+	}
+		
+};
+//document.write("<h3>" + name + "</h3>");
+//name은 emp1이 갖고있다. emp1밖에서는 쓸 수 없다.아래처럼"객체.변수or함수"로 표현
+
+document.write("<h3>" + emp1.name + "</h3>");
+document.write("<h3>보너스 받기 전 급여" + emp1.salary + "</h3>");
+document.write("<h3>보너스 포함 급여" + emp1.calcSalary(5000) + "</h3>");//Uncaught ReferenceError: salary is not defined
+//function 내부에 새로운 calcSalary가 선언된 것이다. emp밖의 것이라고 표현해야 한다.:function 내부의 지역변수가 아니라 객체 내부의 것이라고 (프로퍼티)
+//this : 현재function의 객체
+
+</script>
+
+</body>
+</html>
