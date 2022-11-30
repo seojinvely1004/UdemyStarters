@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+let result1 = 10 / 3;
+document.write("<H3> 10 / 3 = " + window.parseInt(result1) + "</h3>");
+
+let result2 = 10 % 3;
+document.write("<H3> 10 % 3 = " + result2 + "</h3>");
+
+let result3 = 10;
+document.write("<H3> 10(1증가) = " + result3++ + "</h3>"); 
+
+let result4 = 20;
+let result5 = ++result4;
+document.write("<H3> 10(1증가) = " + result5 + "</h3>");
+
+let a = 10;
+let b = 20;
+let temp = a;
+a = b;
+b = temp; 
+//a와 b의 값 교환 결과 : a = 20, b = 10 
+document.write("<H3> a와 b의 값 교환 결과 = " + "a=" + a + ", b=" + b + "</h3>");
+
+let age = prompt("나이 입력하세요");
+document.write("<H3> age : " + age + 10 + "</h3>");
+
+</script>
+</body>
+</html>
