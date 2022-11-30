@@ -30,6 +30,21 @@ document.write("<h3>보너스 포함 급여" + emp1.calcSalary(5000) + "</h3>");
 //function 내부에 새로운 calcSalary가 선언된 것이다. emp밖의 것이라고 표현해야 한다.:function 내부의 지역변수가 아니라 객체 내부의 것이라고 (프로퍼티)
 //this : 현재function의 객체
 
+//2. 
+var emp2 = {
+	id : 200,//사번
+	name : "홍길동2",
+	salary :55000.00,
+	calcSalary : function(bonus) {
+		this.salary = this.salary + bonus;
+		return this.salary;		
+	},
+	study : function() {
+		document.write("<h3>" + "석박사 과정을 공부합니다" + "</h3>");
+	}
+	
+};
+emp2.study();//emp2만의 기능.
 </script>
 
 </body>
