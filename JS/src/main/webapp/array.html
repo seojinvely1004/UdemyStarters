@@ -10,7 +10,6 @@
 var b = [1, 2, 3];
 var c = ["java", true, [1,2,3], 3.14];
 var a2 = new Array(1);
-
 var a = [];
 a[0] = 10;
 a[1] = 20;
@@ -24,6 +23,9 @@ for(var i = 0; i < a.length; i++) {
 for(index in a) {//a라는 배열에 index가 포함되어있는 것 만큼 알아서 반복해. => for in 반복문
 	document.write("<h3>" + index + ":번째 인덱스의 값 = " + a[index] + "</h3>");
 }
+document.write("<h3>" + a.join('-') + "</h3>");
+document.write("<h3>" + a.join('<br>') + "</h3>");
+
 </script>
 </body>
 </html>
