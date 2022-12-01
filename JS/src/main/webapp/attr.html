@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery/jquery-3.6.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$("img:first").attr("src", "/html/images/drinks.jpg");//setter
+		$("img:first").css("width", 100);
+		$("img:first").css("height", 100);
+		$("img:first").attr("alt", "이미지경로오류");
+		$("img:last").attr("src", "/html/images/coffee.jpg");//setter
+		$("img:last").css("width", 200);
+		$("img:last").css("height", 200);
+		$("img:last").attr("alt", "커피이미지");
+		$("img").each(function(index) {
+			$("#result").append
+			(index + i + " 번째 이미지의 경로=" + $(this).attr("src")+"<br>");
+		});//each end
+		//$("#result").text($("img:first").attr("src"));//getter
+		$("img:first").removeAttr("src");
+		//$("#userinput").attr("value", "변경");//value저장속성명
+		$("#userinput").arrt("변경2");//value저장속성명
+	});
+</script>
+
+<script>
+	window.onload = function() {
+		//var img = document.querySelectorAll("img")[0];
+	}
+</script>
+</head>
+<body>
+	<img>
+	<img>
+	<h1 id="result"></h1>
+	<input type="text" value="내용을 입력하세요">
+</body>
+</html>
