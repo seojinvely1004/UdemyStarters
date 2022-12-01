@@ -13,7 +13,7 @@ $(document) .ready(function(){
 //$("#help").html("--" + $("#a") .attr("checked") +  "--");
 //$("#help2").html("--" + $("#a") .prop("checked"));
 
-	setInterval (function(){
+	/*setInterval (function(){
 		if($("#a").attr("checked") == 'checked') {
 			$("#a").removeAttr("checked")
 		}
@@ -21,13 +21,26 @@ $(document) .ready(function(){
 			$("#a").attr("checked", "checked");
 		}
 		
+	}, 1000);*/
+	
+	setInterval (function(){
+			
+		if($("#a").prop("checked") == ture) {
+			$("#a").prop("checked", false);
+	}
+	else {
+		$("#a").prop("checked", true);
+	}
+		
 	}, 1000);
 });
+
+
 </script>
 </head>
 <body>
 <a href="selector.html" id="link1">선택자 예제파일로 이동</a><br>
-<input type="checkbox" id="a" value="새싹"> 새싹 아카데미
+<input type="checkbox" id="a" value="새싹" checked> 새싹 아카데미
 <input type="checkbox" id="b" value="꽃잎"> 꽃잎 아카데미
 <input type="checkbox" id="c" value="열매"> 열매 아카데미
 <input type="checkbox" id="d" value="나무"> 나무 아카데미
