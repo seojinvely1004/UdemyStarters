@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.1.min.js"></script>
+
+<script>
+$(document) .ready(function(){
+	$("a") .on('click', function(ev){
+		$(this) .attr("href", "b.html");
+		$(this) .html("이동안합니다.");
+		ev.preventDefault();
+	});
+});
+</script>
+</head>
+<body>
+<a href="a.html">링크이동</a>
+</body>
+</html>
