@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery/jquery-3.6.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+				$("img:first") .attr("src", "/html/images/drinks.jpg");//setter
+				$("img:first") .css("width", 100);
+				$("img:first") .css("height", 100);
+				$("img:first") .attr("alt", "이미지경로오류");
+				$("img:last") .attr("src", "/html/images/coffee.gif");//setter
+				$("img:last") .css("width", 200);
+				$("img:last") .css("height", 200);
+				$("img:last") .attr("alt", "커피이미지");
+				/*$("img").each(
+						function(index) {
+							$("#result").append(index + i + " 번째 이미지의 경로="+ $(this).attr("src") + "<br>");
+						});//each end*/
+						
+				$("img") .removeAttr("scr");//alt
+
+				//var img_array = [ "/html/images/drinks/jpg","/html/images/coffee.gif" ];
+				/*setInterval(function() {
+					$("img").each(function(index) {
+										if ($("emg:eq(" + index + ")").attr("src") == undefined) {//index번째에 src속성이 없으면 undefined	
+											$(this).attr("src", img_array[index]);
+										$("#result").html("보인다");
+										}
+										else {
+											$(this).removeAttr("src");
+											$("#result").html("안보인다");
+											$("")
+										}
+									});//each
+				}, 1000);//setInterval*/
+				
+				//1초마다 1번씩 이미지 생성
+				var img_array = [ "/html/images/drinks.jpg","/html/images/coffee.gif" ];
+				setInterval( function() {
+					$("#addimg") .append("<img>");
+					$("#addimg img") .each(function(i){
+						$(this) .attr('src', img_array[i % img_array.length]);//this = addimg img
+						$("addimg img") .attr('width', 100);//첫번째는 꼭 this로써줘야한다. 여러개이미지 2, 3은 this나 addimg안에있는 img태그 둘 다 된다. 
+						$("addimg img") .attr('height', 100);
+					});//each
+					
+				}, 1000);//setInterval
+			});
+</script>
+</head>
+<body>
+<img>
+<img>
+<div id=addimg></div>
+<h1 id="result"></h1>
+	
+</body>
+</html>
