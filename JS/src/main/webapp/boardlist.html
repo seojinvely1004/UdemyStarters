@@ -22,7 +22,8 @@ function Board(seq, title, contents){
 ​
 var boardlist = [];
 //var boardlist = new Array(5);
-
+/*1. 게시물저장 버튼 클릭시
+1-1 save 버튼 클릭하면 seq, title, contents 입력값 가져온다*/
 window.onload = function() {
 	var save = document.querySelector("#save");//button save는 DOM객체타입. id가 save인 DOM객체구조설계
 	var output = document.querySelector("#output");//button
@@ -33,7 +34,15 @@ window.onload = function() {
 	var contents = document.querySelector("#contents");//input type text
 	
 	save.onclick = function() {
-		var board = new Board(seq.value, title.value, contents.value);
+		var clickcount = 0;
+		var board1 = new Board(seq.value, title.value, contents.value);//1-2,3.Board 생성자 함수 정의해서 1-1 입력값 Board 객체 생성
+		boardlist.push(board1);//1-4. boardlist 배열에 저장
+		clickcount++;
+		saveresult.innerHTML = "<H3>게시물 " + clickcount + "개 저장되었습니다.</H3>"//1-5. saveresult 태그에 게시물 1개 저장되었습니다 출력
+		if(clickcount >5) {
+			saveresult.innerHTML = "<H3>게시물 추가 저장 불가능합니다. 리스트를 출력하세요</H3>";
+			//1-6. 단, 6번째부터는 saveresult 태그에 게시물 추가 저장 불가능합니다. 리스트를 출력하세요 
+		}
 	}
 }
 ​
