@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='jquery-3.6.1.min.js'></script>
+<script>
+$(document).ready(function(){
+	//id second 태그 선택하여 글씨색 빨강
+/* $('#second').css('color','red');
+$('.red').css('color','red'); */
+//$('h1').css('color','red');
+//$('h1 a').css('color','red'); //h1 포함 자식, 자식의 자식...
+//$('h1 > a').css('color','red'); //h1 포함 자식만
+//$('h1, td').css('color','red');
+//$('h1#second').css('color','red')
+//$('h1.red').css('color','red')
+//$('input [type=text]').css('color','red');
+//$('input:text').css('color','red');
+//$('input[type=button]').css('color','red');
+//$('input:button, button').css('color','red');
+//input type 'e' 포함 태그 선택
+//$('input[type*=e]').css('color','red');
+//input type에 'e' 시작 태그 선택
+//$('input[type^=e]').css('color','red')
+//input type 에 'el 종료 태그 선택
+//$('input[type$=el]').css('color','red')
+//$('input:checked').parent().css('color','red')
+//$('table th').css('color','red');
+//$('th:first').css('color','yellow');
+//$('th:last').css('color','orange');
+//$('table th').css('color','red');
+//$('th:first-child').css('color','yellow');
+//$('th:last-child').css('color','orange');
+$('tr:eq(3) td').css('color','red')
+$('tr:eq(3) td').css('color','green')
+$('tr:lt(3) td').css('color','blue')
+//select에 option에 selected
+// $('select option:selected').css('color','red')
+$('select option[selected=selected]').css('color','red')
+});
+</script>
+</head>
+<body>
+<h1 class='red'>제목1</h1>
+<h1 id='second'>제목1</h1>
+<h1><a href='a.html'>링크1</a></h1>
+<a class='red' href='b.html'>링크2</a>
+<input type=text value='기본문자열'><br>
+<input type=password value='기본암호'><br>
+<input type=tel value='기본암호'><br>
+<input type=url value='http://'><br>
+<input type=email value='a@b.com'><br>
+<input type=button value='버튼1'><br>
+<button>버튼2</button>
+<label for 'little'>
+<input type=checkbox value='sql' id='title' checked>sql
+</label>
+<input type=checkbox value='sql'>sql
+<input type=checkbox value='java' >자바
+<input type=checkbox value='spring'>스프링
+<input type=checkbox value='db'>마리아
+<select>
+	<option>1</option>
+	<option selected=selected>2</option>
+	<option>3</option>
+	<option>4</option>
+</select>
+<table>
+<tr><th>번호</th><th>제목</th><th>내용</th><th>작성자</th></tr>
+<tr><td>1</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>2</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>3</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>4</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>5</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>6</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>7</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+</table>
+<table>
+<tr><th>번호</th><th>제목</th><th>내용</th><th>작성자</th></tr>
+<tr><td>1</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>2</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>3</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>4</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>5</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>6</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+<tr><td>7</td><td>제목1</td><td>내용1</td><td>웅진</td></tr>
+</table>
+</body>
+</html>
