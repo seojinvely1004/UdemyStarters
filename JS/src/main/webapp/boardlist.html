@@ -21,6 +21,21 @@ function Board(seq, title, contents){
 }
 ​
 var boardlist = [];
+//var boardlist = new Array(5);
+
+window.onload = function() {
+	var save = document.querySelector("#save");//button save는 DOM객체타입. id가 save인 DOM객체구조설계
+	var output = document.querySelector("#output");//button
+	var saveresult = document.querySelector("#saveresult");//div
+	var list = document.querySelector("#list");//div
+	var seq = document.querySelector("#seq");//input type text
+	var title = document.querySelector("#title");//input type text
+	var contents = document.querySelector("#contents");//input type text
+	
+	save.onclick = function() {
+		var board = new Board(seq.value, title.value, contents.value);
+	}
+}
 ​
 1. 게시물저장 버튼 클릭시
 1-1 save 버튼 클릭하면 seq, title, contents 입력값 가져온다
@@ -57,6 +72,5 @@ list 태그에 5개 게시물 리스트 출력
 ​
 <input type=button id="output" value="게시물조회">
 <div id="list"> 5개 게시물 입력 결과 출력 </div>
-​
 </body>
 </html>
