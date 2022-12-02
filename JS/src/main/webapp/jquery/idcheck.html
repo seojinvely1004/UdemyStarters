@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document) .ready(function() {
+	var id_list = ['java', 'html', 'script', 'jsp', 'servlet'];
+	var id = opener.$("#id") .val();
+	$("#result") .html(id);
+	for(var i = 0; i < id_list.length; i++) {
+		if(id == id_list[i]) {
+			isCheck = "는 사용 불가능합니다.";
+		}
+		else{
+			isCheck = "는 사용 가능합니다.";
+		}
+	}
+	$("result") .append(isCheck);
+	
+});
+</script>
+</head>
+<body>
+<div id=result>중복검사여부</div>
+<input type="button" value="창닫기" id="close">
+</body>
+</html>
