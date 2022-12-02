@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.1.min.js"></script>
+<!-- 모두 제목 내용 작성자 중 한개 이상 선택하고 검색어를 입력한 다음에 검색 버튼 클릭하면 search.jsp로 전송된다
+    1>이 때 모두를 선택시 제목, 내용, 작성자 자동으로 모두 선택되어야 하고
+    모두 선택 해제시 제목, 내용, 작성자 자동으로 모두 선택해제되도록 구현한다
+    2> 만약 제목 내용 작성자 가운데 아무 것도 선택되지 않거나 검색어 입력되지 않으면 search.jsp로 전송되지 않도록 구현한다
+ -->
+<script>
+	$(document).ready(function() {
+		$('input:checkbox:first').on('click', function() {
+			//모두 체크되지 않았다면 클리했을 때 체크하라
+			if ($(this).attr("checked") == undefined) {
+				$(this).attr("checked", "checked")
+			} else {
+				$(this).removeAttr("checked");
+			}
+			//제목 내용 작성자 모두 체크
+			if ($(this).attr("checked") == 'checked') {
+				$("input:checkbox"), attr("checked", "checked");
+				$("input:checkbox"), prop("checked", true);
+			} else {
+				$("input:checkbox"), removeAttr("checked");
+				$("input:checkbox"), prop("checked", false);
+
+			}
+
+		});//click end
+		$("#searchform").on('submit', function(event) {//searchform의 submit(검색)이벤트가 발생했을 때
+			if ($("input:text") .val() == '') {//검색을 눌렀을 때 입력된 것이 아무것도 없다면
+				event.preventDefault();
+
+			}
+			$("input:checkbox:gt(0)") .each(function() {
+				if ($(this) .attr('checked') == undefined) {//gt : greatter than 
+					event.preventDefault();
+				}//if
+			});//each
+
+		});//submit
+
+	});//ready end
+</script>
+</head>
+<body>
+	<h1>검색 대상과 검색어를 입력하세요.</h1>
+	<form action="search.jsp" id="searchform">
+		<input type=checkbox value="모두" id="all">모두 <input
+			type=checkbox value="제목" id="title">제목 <input type=checkbox
+			value="내용" id="contents">내용 <input type=checkbox value="작성자"
+			id="writer">작성자 <input type=text value="검색어를 입력하세요" /> <input
+			type=submit value="검색" />
+	</form>
+	<div id="result"></div>
+</body>
+</html>
