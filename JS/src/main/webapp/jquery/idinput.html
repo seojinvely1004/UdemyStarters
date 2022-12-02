@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("#idcheck") .on('click', function(){});//idcheck click
+	$("#close") .on('click', function(){});//close click
+}
+
+</script>
+</head>
+<body>
+<form action="회원가입처리백엔드파일명">
+<input type="text" id="id">
+<input type="button" id="idcheck" value="중복확인">
+<input type="button" id="close" value="새창닫기">
+	<div id="result"></div>
+	<br>
+	암호입력: <input type="password" id="pw"><br>
+	이름입력: <input type="text" id="name"><br>
+	폰번호입력: <input type="tel" id="phone"><br>
+<input type="submit" value="회원가입">
+</form>
+</body>
+</html>
